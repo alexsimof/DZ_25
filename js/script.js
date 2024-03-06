@@ -25,7 +25,7 @@ function moveOverEnd(arr1) {
 
   return arr1
 }
-console.log(moveOverEnd(arr1))
+// console.log(moveOverEnd(arr1))
 
 let arr2 = [1, 2, 3, 4]
 function moveOverStart(arr2) {
@@ -36,8 +36,21 @@ function moveOverStart(arr2) {
   return arr2
 
 }
-console.log(moveOverStart(arr2))
+// console.log(moveOverStart(arr2))
 
 // не могу понять как сделать одну функцию, но с вторым параметром, чтоб он переключал ..
 // moveOver([1,2,3,4], 'end') // [2,3,4,1]
 // moveOver([1,2,3,4], 'start') // [4,1,2,3]
+
+// third task
+
+
+function findLongestWord (str) {
+  
+  let long = str.split(' ').reduce((a, b) => (b.length > a.length) ? b : a );
+  let short = str.split(' ').reduce((a, b) => (b.length < a.length) ? b : a);
+
+  return {long, short}
+  
+}
+console.log(findLongestWord("The quick brown fox jumped over the lazy dog"))
